@@ -3,7 +3,7 @@ import { Button, ButtonProps } from "@mui/material";
 type PickType = "variant" | "color" | "disabled" | "fullWidth" | "size";
 
 export interface MuiButtonProps extends Pick<ButtonProps, PickType> {
-  label: string;
+  label?: string;
 }
 
 const MuiButton = ({ label, ...rest }: MuiButtonProps) => {
