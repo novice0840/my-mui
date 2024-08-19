@@ -7,7 +7,7 @@
 ### Inputs
 
 - [ ] Autocomplete
-- [ ] Button
+- [x] Button
 - [ ] Button Group
 - [ ] Checkbox
 - [ ] Floating Action Button

@@ -4,7 +4,7 @@ import Button from "./Button";
 import StorybookWrapper from "../../common/StorybookWrapper/StorybookWrapper";
 
 const meta = {
-  title: "Example/Button",
+  title: "Input/Button",
   component: MuiButton,
   parameters: {
     layout: "centered",
