@@ -1,8 +1,13 @@
 import { MuiTextFieldProps } from "./MuiTextField";
-import { Wrapper } from "./TextField.styled";
+import { Wrapper, Label, Input } from "./TextField.styled";
 
-const TextField = ({ ...rest }: MuiTextFieldProps) => {
-  return <Wrapper />;
+const TextField = ({ label, defaultValue, ...rest }: MuiTextFieldProps) => {
+  return (
+    <Wrapper>
+      <Label>{label}</Label>
+      <Input type="text" value={defaultValue as string} />
+    </Wrapper>
+  );
 };
 
 export default TextField;
