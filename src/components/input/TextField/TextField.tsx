@@ -1,7 +1,8 @@
-import React from "react";
+import { MuiTextFieldProps } from "./MuiTextField";
+import { Wrapper } from "./TextField.styled";
 
-const TextField = () => {
-  return <div>this is text field</div>;
+const TextField = ({ ...rest }: MuiTextFieldProps) => {
+  return <Wrapper />;
 };
 
 export default TextField;

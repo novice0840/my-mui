@@ -17,18 +17,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    helperText: "hell world",
+    id: "textfield-id",
+    label: "textfield-label",
+    helperText: "",
+    defaultValue: "",
   },
   render: (args) => (
     <StorybookWrapper>
-      <MuiTextField
-        id="standard-error-helper-text"
-        label="Error"
-        defaultValue="Hello World"
-        helperText="Incorrect entry."
-        variant="standard"
-        {...args}
-      />
+      <MuiTextField {...args} />
       <TextField {...args} />
     </StorybookWrapper>
   ),
