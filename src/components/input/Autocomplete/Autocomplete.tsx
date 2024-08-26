@@ -1,7 +1,13 @@
-import React from "react";
+import type { MuiAutocomplete } from "./MuiAutocomplete";
+import { Wrapper } from "./Autocomplete.styled";
 
-const Autocomplete = () => {
-  return <div></div>;
+const Autocomplete = ({ ...rest }: MuiAutocomplete) => {
+  return (
+    <Wrapper {...rest}>
+      <label></label>
+      <input type="text" />
+    </Wrapper>
+  );
 };
 
 export default Autocomplete;

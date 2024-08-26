@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import StorybookWrapper from "../../common/StorybookWrapper/StorybookWrapper";
 import MuiAutocomplete from "./MuiAutocomplete";
+import Autocomplete from "./Autocomplete";
 import { AutocompleteRenderInputParams, TextField } from "@mui/material";
 
 const top100Films = [
@@ -24,14 +25,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    disablePortal: true,
-    id: "combo-box-demo",
     options: top100Films,
-    renderInput: (params: AutocompleteRenderInputParams) => <TextField {...params} label="Movie" />,
+    sx: { width: 300 },
+    renderInput: (params: AutocompleteRenderInputParams) => (
+      <TextField {...params} label="Movie2" />
+    ),
   },
   render: (args) => (
     <StorybookWrapper>
       <MuiAutocomplete {...args} />
+      <Autocomplete {...args} />
     </StorybookWrapper>
   ),
 };

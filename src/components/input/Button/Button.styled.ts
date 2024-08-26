@@ -64,10 +64,6 @@ const buttonDisabled = {
 export const Wrapper = styled.button<MuiButtonProps>`
   background-color: transparent;
   border: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
-  line-height: 1.75;
-  letter-spacing: 0.02857em;
   text-transform: uppercase;
   border-radius: 4px;
 
