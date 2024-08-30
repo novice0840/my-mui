@@ -19,8 +19,6 @@ export const Default: Story = {
   args: {
     id: "textfield-id",
     label: "textfield-label",
-    helperText: "",
-    defaultValue: "",
   },
   render: (args) => (
     <StorybookWrapper>
