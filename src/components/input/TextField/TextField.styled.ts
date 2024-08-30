@@ -11,16 +11,17 @@ export const Wrapper = styled.div<{ isActive: boolean }>`
   cursor: text;
 
   &:hover {
-    border: 1px solid rgba(0, 0, 0);
+    ${(props) => !props.isActive && "border: 1px solid rgba(0, 0, 0);"}
   }
 
-  ${(props) => props.isActive && "border: 1px solid blue;"}
+  ${(props) => props.isActive && "border: 2px solid #1976d2;"}
 `;
 
 export const Label = styled.label`
   position: absolute;
   top: 0;
   left: 0;
+  transform-origin: left top;
   transform: translate(14px, 16px) scale(1);
   transition:
     color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
@@ -30,7 +31,11 @@ export const Label = styled.label`
   pointer-events: none;
 
   ${Wrapper}:focus-within & {
-    transform: translate(14px, -10px) scale(0.8); /* label을 위로 이동하고 크기를 줄임 */
+    transform: translate(9px, -9px) scale(0.75); /* label을 위로 이동하고 크기를 줄임 */
+    color: #1976d2;
+    padding: 0 5px;
+    /* width: auto; */
+    background-color: white;
   }
 `;
 
